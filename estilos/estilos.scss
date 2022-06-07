@@ -113,6 +113,12 @@ form{
         &::placeholder {
             color:$col1;
         }
+        // Para borrar las flechas arriba y abajo en el input "telefono"
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     }
 
     select{
@@ -137,13 +143,6 @@ form{
 
         &::placeholder {
             color:$col1;
-        }
-
-        // Para borrar las flechas arriba y abajo en el input "telefono"
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
         }
     }
 }
