@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+// paleta de colores
+
+$col1: #fff;
+$col2: #666;
+$col3: #E7D3B1;
+$col4: #bdbdbd;
+
+/* ------etiquetas base----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    background: $col1;
+    color: #7E7E7E;
+}
+
+/* clases genéricas */
+
+.fondoBeige{
+    background: $col3;
+    z-index: 1;
+}
+
+.fondoGris{
+    background: $col4;
+}
+
+.blanco{
+    color:$col1;
+}
+
+.blanco:hover{
+    color: $col1;
+}
+
+.hovShake:hover{
+    animation: headShake;
+    animation-duration:1.5s;
+}
+
+.fadeIn{
+    animation: fadeIn;
+    animation-duration:6s;
+}
+
+.textShad{
+    text-shadow: 50px 5px 50px #000000;
+}
+
+/* ------ pie de pagina ------ */
+
+footer a{
+    font-size: 35px;
+    text-decoration: none;
+    color:$col1;
+    letter-spacing: 15px;
+}
+
+footer a:hover{
+    color: $col2;
+    transition: ease-in 500ms;
+}
+
+/* ------------------- Estilos contacto.html ------------------- */
+
+/* ----- portada/cuerpo de contacto.html ----- */
+main{
+    min-height:90%;
+}
+
+.portadaContacto{
+    height: 680px;
+    background-image: url("../img/contenedor2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h1{
+        font-size: 40px;
+        font-weight: 100;
+        letter-spacing: 4px;
+        color: $col2;
+    }
+
+    .row{
+        margin-left: 7%;
+    }
+}
+
+form{
+    height: 480px;
+
+    input{
+        background: none;
+        border:none;
+        border-bottom: 2px solid $col2;
+        outline: none;
+        color:$col2;
+        &::placeholder {
+            color:$col1;
+        }
+    }
+
+    select{
+        background: none;
+        border: 2px solid $col2;
+        outline: none;
+        color:$col2;
+        width: 100%;
+        &:hover{
+            background: #ffffff4C;
+            transition: ease 500ms;
+            color:$col2;
+        }
+    }
+
+    textarea{
+        background: none;
+        border:none;
+        border-bottom: 2px solid $col2;
+        outline: none;
+        color:$col2;
+
+        &::placeholder {
+            color:$col1;
+        }
+
+        // Para borrar las flechas arriba y abajo en el input "telefono"
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+.enviar{
+    width: 80%;
+    border: 2px solid $col2;
+    color:$col1;
+    &:hover{
+        background: #ffffff4C;
+        transition: ease 500ms;
+        color:$col2;
+    }
+    
+}
+
+@media screen and (min-width: 576px){
+
+    .portadaContacto{
+        background-image: url("../img/contenedor2.png");
+        
+        .row{
+            margin-left: 20%;
+        }
+
+        h1{
+            font-size:50px; 
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    form select{
+        width: 55%;
+    }
+
+    .enviar{
+        width: 30%;
+    }
+
+    .portadaContacto .row{
+        margin-left: 27%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .portadaContacto{
+        background-image: url("../img/contenedor1.png");
+        .row{
+            margin-left: 15%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .portadaContacto .row{
+        margin-left: 22%;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .portadaContacto .row{
+        margin-left: 28%;
+    }
+}
