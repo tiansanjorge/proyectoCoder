@@ -64,16 +64,17 @@ body {
 
 /* ------ pie de pagina ------ */
 
-footer a{
-    font-size: 35px;
-    text-decoration: none;
-    color:$col1;
-    letter-spacing: 15px;
-}
-
-footer a:hover{
-    color: $col2;
-    transition: ease-in 500ms;
+footer {
+    a{
+        font-size: 35px;
+        text-decoration: none;
+        color:$col1;
+        letter-spacing: 15px;
+        &:hover{
+            color: $col2;
+            transition: ease-in 500ms;
+        }
+    }
 }
 
 /* ------------------- Estilos contacto.html ------------------- */
@@ -183,14 +184,18 @@ form{
         width: 30%;
     }
 
-    .portadaContacto .row{
-        margin-left: 27%;
-    }
+    .portadaContacto {
+
+        .row{
+            margin-left: 27%;
+        }
+    }   
 }
 
 @media screen and (min-width: 992px){
     .portadaContacto{
         background-image: url("../img/contenedor1.png");
+
         .row{
             margin-left: 15%;
         }
@@ -198,13 +203,17 @@ form{
 }
 
 @media screen and (min-width: 1200px){
-    .portadaContacto .row{
-        margin-left: 22%;
+    .portadaContacto {
+        .row{
+            margin-left: 22%;
+        }
     }
 }
 
 @media screen and (min-width: 1400px){
-    .portadaContacto .row{
-        margin-left: 28%;
+    .portadaContacto{
+        .row{
+            margin-left: 28%;
+        }
     }
 }
